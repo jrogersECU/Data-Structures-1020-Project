@@ -8,7 +8,7 @@
 #Quick research done to determine what needs to be created
 
 #Tasks (In no particular order, this is a living list):
-#Create class “Budget” with an instance variable called “ledger” which is a list the following class methods
+#Create class “Budget” with an instance variable called “ledger” which is a list and the following class methods
     #Deposit
     #Withdraw
     #Get Balance
