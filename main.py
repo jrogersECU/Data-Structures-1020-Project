@@ -25,15 +25,65 @@ def begin_budget():
         print('-' * 35)
 
         # User Commands
+        # Added slot for transaction
+        # log and exit
         print(f'{"0 : Deposit":20} {"1 : Withdraw":16s}')
-        print(f'{"2 : Get Balance":20s} {"3 : Transfer":16s}')  # Changed "Transfer" to "Withdraw"
-        print(f'{"4 : Get Funds":20s}\n')
+        print(f'{"2 : Get Balance":20s} {"3 : Transfer":16s}')
+        print(f'{"4 : Get Funds":20s} {"5 : View Transaction Log"}')
+        print(f'{"6 : Exit":20s}\n')
+
+        #Ask User for next input
+        # Added groundwork for the user functions
         user_input = input('Enter your selection:\n').strip().lower()
         print('\n\n\n\n\n')
 
         if user_input != 'exit':
             if user_input == '0' or user_input.lower() == 'Deposit':
-                print("unfinished")
+                print("unfinished please press 1 to return to main program")
+                user_input = input()
+                # reset program
+                if user_input == '1':
+                    begin_budget()
+
+            if user_input == '1' or user_input.lower() == 'Withdraw':
+                print("unfinished please press 1 to return to main program")
+                user_input = input()
+                # reset program
+                if user_input == '1':
+                    begin_budget()
+
+            if user_input == '2' or user_input.lower() == 'Get Balance':
+                print("unfinished please press 1 to return to main program")
+                user_input = input()
+                # reset program
+                if user_input == '1':
+                    begin_budget()
+
+            if user_input == '3' or user_input.lower() == 'Transfer':
+                print("unfinished please press 1 to return to main program")
+                user_input = input()
+                # reset program
+                if user_input == '1':
+                    begin_budget()
+
+            if user_input == '4' or user_input.lower() == 'Get Funds':
+                print("unfinished please press 1 to return to main program")
+                user_input = input()
+                # reset program
+                if user_input == '1':
+                    begin_budget()
+
+            if user_input == '5' or user_input.lower() == 'View Transaction Log':
+                print("unfinished please press 1 to return to main program")
+                user_input = input()
+                # reset program
+                if user_input == '1':
+                    begin_budget()
+
+            if user_input == '6' or user_input.lower() == 'Exit':
+                print("Thank you for choosing Bloodhound Budgets!")
+                # reset program
+                begin_budget()
 
 
 
@@ -46,12 +96,72 @@ def begin_budget():
         print('-' * 35)
 
         # User Commands
+        # Added slot for transaction log and exit
         print(f'{"0 : Deposit":20} {"1 : Withdraw":16s}')
-        print(f'{"2 : Get Balance":20s} {"3 : Transfer":16s}')  # Changed "Transfer" to "Withdraw"
-        print(f'{"4 : Get Funds":20s}\n')
+        print(f'{"2 : Get Balance":20s} {"3 : Transfer":16s}')
+        print(f'{"4 : Get Funds":20s} {"5 : View Transaction Log"}')
+        print(f'{"6 : Exit":20s}\n')
+
+        # Ask User for next input
+        # Added groundwork for the user functions
+        user_input = input('Enter your selection:\n').strip().lower()
+        print('\n\n\n\n\n')
+
+        if user_input != 'exit':
+            if user_input == '0' or user_input.lower() == 'Deposit':
+                print("unfinished please press 1 to return to main program")
+                user_input = input()
+                # reset program
+                if user_input == '1':
+                    begin_budget()
+
+            if user_input == '1' or user_input.lower() == 'Withdraw':
+                print("unfinished please press 1 to return to main program")
+                user_input = input()
+                # reset program
+                if user_input == '1':
+                    begin_budget()
+
+            if user_input == '2' or user_input.lower() == 'Get Balance':
+                print("unfinished please press 1 to return to main program")
+                user_input = input()
+                # reset program
+                if user_input == '1':
+                    begin_budget()
+
+            if user_input == '3' or user_input.lower() == 'Transfer':
+                print("unfinished please press 1 to return to main program")
+                user_input = input()
+                # reset program
+                if user_input == '1':
+                    begin_budget()
+
+            if user_input == '4' or user_input.lower() == 'Get Funds':
+                print("unfinished please press 1 to return to main program")
+                user_input = input()
+                # reset program
+                if user_input == '1':
+                    begin_budget()
+
+            if user_input == '5' or user_input.lower() == 'View Transaction Log':
+                print("unfinished please press 1 to return to main program")
+                user_input = input()
+                # reset program
+                if user_input == '1':
+                    begin_budget()
+
+            if user_input == '6' or user_input.lower() == 'Exit':
+                print("Thank you for choosing Bloodhound Budgets!")
+                # reset program
+                begin_budget()
 
     else:
-        print("Sorry, invalid PIN")
+        #Added user command to restart program on invalid input
+        print("Sorry, invalid PIN, press 1 to restart")
+        user_input = input()
+        if user_input == '1':
+            begin_budget()
+
 
 
 
