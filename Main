@@ -1,14 +1,14 @@
 #Project Prompt (Assigned by Mr. Vilkomir)
 
-#Create a Budget program (class) that can instantiate objects based on different budget categories
-#like food, clothing, and entertainment. These objects should allow for depositing and withdrawing funds
-#from each category, as well computing category balances and transferring balance amounts between
-#categories. Implement logging functionality using Linked List. Implement search in log functionality
+Create a Budget program (class) that can instantiate objects based on different budget categories
+like food, clothing, and entertainment. These objects should allow for depositing and withdrawing funds
+from each category, as well computing category balances and transferring balance amounts between
+categories. Implement logging functionality using Linked List. Implement search in log functionality
 
-#Quick research done to determine what needs to be created
+Quick research done to determine what needs to be created
 
-#Tasks (In no particular order, this is a living list):
-#Create class “Budget” with an instance variable called “ledger” which is a list and the following class methods
+Tasks (In no particular order, this is a living list):
+Create class “Budget” with an instance variable called “ledger” which is a list and the following class methods
     #Deposit
     #Withdraw
     #Get Balance
