@@ -3,8 +3,8 @@ import datetime
 date = str(datetime.date.today())
 
 # Create a new Person entry in the database
-Person_1 = Person('Mutulu Shakur', 10, 12345)
-Person_2 = Person('Ricky Bobby', 42, 42069)
+Person_1 = Person('Mutulu Shakur', 21, 100)
+Person_2 = Person('Ricky Bobby', 42, 0)
 def begin_budget():
     # WELCOME MESSAGE (START OF PROGRAM)
     print("****************************************************************************")
@@ -25,12 +25,12 @@ def begin_budget():
         print('-' * 35)
 
         # User Commands
-        # Added slot for transaction
-        # log and exit
+        # Added slot for transaction log and exit
+        # Added slot to display Account info
         print(f'{"0 : Deposit":20} {"1 : Withdraw":16s}')
         print(f'{"2 : Get Balance":20s} {"3 : Transfer":16s}')
         print(f'{"4 : Get Funds":20s} {"5 : View Transaction Log"}')
-        print(f'{"6 : Exit":20s}\n')
+        print(f'{"6 : Display Info":20s} {"7 : Exit"}\n')
 
         #Ask User for next input
         # Added groundwork for the user functions
@@ -38,12 +38,27 @@ def begin_budget():
         print('\n\n\n\n\n')
 
         if user_input != 'exit':
+
             if user_input == '0' or user_input.lower() == 'Deposit':
-                print("unfinished please press 1 to return to main program")
-                user_input = input()
-                # reset program
-                if user_input == '1':
+                # set class variables
+                amount = int(input("Please enter the amount you wish to deposit"))
+                self = Person_1.income
+
+                #Initialize class def add_pay_check
+                Person_1.add_pay_check(amount)
+
+                #Ask for user input
+                user_input = input('Press 1 or restart to return to main menu or any other key to quit:\n').strip().lower()
+                print('\n\n\n\n\n')
+
+                # restart program
+                if user_input == '1' or user_input.lower() == 'restart':
                     begin_budget()
+
+                # end program
+                else:
+                    print("Thank you for using Bloodhound Budgets!")
+
 
             if user_input == '1' or user_input.lower() == 'Withdraw':
                 print("unfinished please press 1 to return to main program")
@@ -80,7 +95,15 @@ def begin_budget():
                 if user_input == '1':
                     begin_budget()
 
-            if user_input == '6' or user_input.lower() == 'Exit':
+            if user_input == '6' or user_input.lower() == 'Display info':
+                print(Person_1.print_all_info())
+                print("unfinished please press 1 to return to main program")
+                user_input = input()
+                # reset program
+                if user_input == '1':
+                    begin_budget()
+
+            if user_input == '7' or user_input.lower() == 'Exit':
                 print("Thank you for choosing Bloodhound Budgets!")
                 # reset program
                 begin_budget()
@@ -97,10 +120,11 @@ def begin_budget():
 
         # User Commands
         # Added slot for transaction log and exit
+        #Added Slot to display account info
         print(f'{"0 : Deposit":20} {"1 : Withdraw":16s}')
         print(f'{"2 : Get Balance":20s} {"3 : Transfer":16s}')
         print(f'{"4 : Get Funds":20s} {"5 : View Transaction Log"}')
-        print(f'{"6 : Exit":20s}\n')
+        print(f'{"6 : Display Info":20s} {"7 : Exit"}\n')
 
         # Ask User for next input
         # Added groundwork for the user functions
@@ -108,9 +132,33 @@ def begin_budget():
         print('\n\n\n\n\n')
 
         if user_input != 'exit':
+
             if user_input == '0' or user_input.lower() == 'Deposit':
-                print("unfinished please press 1 to return to main program")
-                user_input = input()
+                # set class variables
+                amount = int(input("Please enter the amount you wish to deposit"))
+                self = Person_2.income
+
+                # Initialize class def add_pay_check
+                Person_2.add_pay_check(amount)
+
+                # Ask for user input
+                user_input = input(
+                    'Press 1 or restart to return to main menu or any other key to quit:\n').strip().lower()
+                print('\n\n\n\n\n')
+
+                # restart program
+                if user_input == '1' or user_input.lower() == 'restart':
+                    begin_budget()
+
+                # end program
+                else:
+                    print("Thank you for using Bloodhound Budgets!")
+
+                if user_input == '1' or user_input.lower() == 'restart':
+                    begin_budget()
+
+                else:
+                    print("Thank you for using Bloodhound Budgets!")
                 # reset program
                 if user_input == '1':
                     begin_budget()
@@ -150,7 +198,15 @@ def begin_budget():
                 if user_input == '1':
                     begin_budget()
 
-            if user_input == '6' or user_input.lower() == 'Exit':
+            if user_input == '6' or user_input.lower() == 'Display info':
+                print(Person_2.print_all_info())
+                print("unfinished please press 1 to return to main program")
+                user_input = input()
+                # reset program
+                if user_input == '1':
+                    begin_budget()
+
+            if user_input == '7' or user_input.lower() == 'Exit':
                 print("Thank you for choosing Bloodhound Budgets!")
                 # reset program
                 begin_budget()
@@ -175,7 +231,7 @@ def begin_budget():
 #Person_1.add_expense(200)
 # Add Expense
 
-Person_1.add_expense(23)
+#Person_1.add_expense(23)
 
 
 # Request Balance
@@ -185,25 +241,25 @@ Person_1.add_expense(23)
 #Person_1.print_all_info()
 #Person_2.print_all_info()
 
-# Add Category Funds
-Person_1.add_category_funds('Housing', 331)
-# Decrease Category Funds
-Person_1.decrease_category_funds('Housing', 300)
-# Display Category Value
-Person_1.print_category('Housing')
-# Create Additional Category
-Person_1.add_custom_category('Dating', 100_000)
-# Transfer Category to Category Funds
-Person_1.transfer_category_funds('Housing', 'Dating', 10_000)
+## Add Category Funds
+#Person_1.add_category_funds('Housing', 331)
+## Decrease Category Funds
+#Person_1.decrease_category_funds('Housing', 300)
+##Display Category Value
+#Person_1.print_category('Housing')
+##Create Additional Category
+#Person_1.add_custom_category('Dating', 100_000)
+##Transfer Category to Category Funds
+#Person_1.transfer_category_funds('Housing', 'Dating', 10_000)
 # Transfer All Category Funds
-Person_1.transfer_all_category_funds('Housing', 'Dating')
-# Display All Person's Info
-Person_1.print_all_info()
-# Display Person's Log
-Person_1.print_logs()
+#Person_1.transfer_all_category_funds('Housing', 'Dating')
+##Display All Person's Info
+#Person_1.print_all_info()
+##Display Person's Log
+#Person_1.print_logs()
 
-Request Usage Percentage
-Person_1.get_use_percentage()
+##Request Usage Percentage
+#Person_1.get_use_percentage()
 
 begin_budget()
 
