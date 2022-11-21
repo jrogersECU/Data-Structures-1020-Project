@@ -20,7 +20,7 @@ class Person:
             'Groceries': 0,
             'Transportation': 0,
             'Utilities': 0,
-            'Dinning': 0,
+            'Dining': 0,
             'Entertainment': 0,
         }
         # TODO ********* REPLACE 'ARRAY_LOG' *************
@@ -54,7 +54,7 @@ class Person:
 
     def add_category_funds(self, category=str, amount=int):
         # If users income/unused funds are >= amount requested, transfer funds to category
-        if self.income >= int(amount):
+        if self.income >= amount:
             print(f'Adding funds to "{category}", Amount: {amount}')
             self.categories[f'{category}'] += amount
             self.expenses += amount
@@ -150,7 +150,7 @@ class Person:
 
     def get_balance(self):
         # Returns the 'total balance' -> ( Balance - Expenses )
-        print(f'Balance after get_balance function : \n{self.income}\n')
+        print(f'Balance after get_balance function : \n{self.income - self.expenses}\n')
         # Updates the log with a new entry and action used Ex.'Deposited Money'
         self.add_log_entry('Requested Balance')
         return self.balance_after_expenses
