@@ -29,7 +29,7 @@ def begin_budget():
         # Added slot to display Account info
         print(f'{"0 : Deposit":20} {"1 : Withdraw":16s}')
         print(f'{"2 : Get Balance":20s} {"3 : Add Expense":16s}')
-        print(f'{"4 : Get Funds":20s} {"5 : View Transaction Log"}')
+        print(f'{"4 : Transfer Funds":20s} {"5 : View Transaction Log"}')
         print(f'{"6 : Display Info":20s} {"7 : Exit"}\n')
 
         #Ask User for next input
@@ -48,7 +48,7 @@ def begin_budget():
                 Person_1.add_pay_check(amount)
 
                 #Ask for user input
-                user_input = input('Press 1 or restart to return to main menu or any other key to quit:\n').strip().lower()
+                user_input = input('Press 1 or restart to return to main menu:\n').strip().lower()
                 print('\n\n\n\n\n')
 
                 # restart program
@@ -61,10 +61,81 @@ def begin_budget():
 
 
             if user_input == '1' or user_input.lower() == 'Withdraw':
-                amount = int(input('Please enter the amount you wish to withdraw:\n'))
-                self = Person_1.expenses
-                Person_1.decrease_category_funds(amount)
-                begin_budget()
+                # Display user-name & date
+                date = str(datetime.date.today())
+                print(Person_1, f"{date:8s}")
+
+                # Display Divider
+                print('-' * 35)
+
+                print(f'{"0 : Housing":20} {"1 : Groceries":16s}')
+                print(f'{"2 : Transportation":20s} {"3 : Utilities":16s}')
+                print(f'{"4 : Dining":20s} {"5 : Entertainment"}')
+                print(f'{"6 : Exit":20s}\n')
+
+                user_input = input('Which expense would you like to withdraw from?:\n').strip().lower()
+                print('\n\n\n\n\n')
+
+                if user_input == '0' or user_input.lower() == 'Housing':
+
+                    for Housing in ['Housing']:
+                        amount = int(input('Please enter the amount you wish to withdraw:\n'))
+                        Person_1.decrease_category_funds(Housing, amount)
+                        #Restart the program
+                        user_input = input('Press 1 to reset\n')
+                        if user_input == '1':
+                            begin_budget()
+
+                if user_input == '1' or user_input.lower() == 'Groceries':
+                    for Groceries in ['Groceries']:
+                        amount = int(input('Please enter the amount you wish to withdraw:\n'))
+                        Person_1.decrease_category_funds(Groceries, amount)
+                        #Restart the program
+                        user_input = input('Press 1 to reset\n')
+                        if user_input == '1':
+                            begin_budget()
+
+
+
+                if user_input == '2' or user_input.lower() == 'Transportation':
+                    for Transportation in ['Transportation']:
+                        amount = int(input('Please enter the amount you wish to withdraw:\n'))
+                        Person_1.decrease_category_funds(Transportation, amount)
+                        #Restart the program
+                        user_input = input('Press 1 to reset\n')
+                        if user_input == '1':
+                            begin_budget()
+
+                if user_input == '3' or user_input.lower() == 'Utilities':
+                    for Utilities in ['Utilities']:
+                        amount = int(input('Please enter the amount you wish to withdraw:\n'))
+                        Person_1.decrease_category_funds(Utilities, amount)
+                        #Restart the program
+                        user_input = input('Press 1 to reset\n')
+                        if user_input == '1':
+                            begin_budget()
+
+                if user_input == '4' or user_input.lower() == 'Dining':
+                    for Utilities in ['Dining']:
+                        amount = int(input('Please enter the amount you wish to withdraw:\n'))
+                        Person_1.decrease_category_funds(Dining, amount)
+                        #Restart the program
+                        user_input = input('Press 1 to reset\n')
+                        if user_input == '1':
+                            begin_budget()
+
+                if user_input == '5' or user_input.lower() == 'Entertainment':
+                    for Entertainment in ['Entertainment']:
+                        amount = int(input('Please enter the amount you wish to withdraw:\n'))
+                        Person_1.decrease_category_funds(Entertainment, amount)
+                        #Restart the program
+                        user_input = input('Press 1 to reset\n')
+                        if user_input == '1':
+                            begin_budget()
+
+                if user_input == '6' or user_input.lower() == 'Exit':
+                    begin_budget()
+
 
             if user_input == '2' or user_input.lower() == 'Get Balance':
                 print("Total account balance:\n")
@@ -73,8 +144,7 @@ def begin_budget():
                 if user_input == '1':
                     begin_budget()
 
-                else:
-                    print("Thank you for using Bloodhound Budgets!")
+
 
 
 
@@ -82,7 +152,13 @@ def begin_budget():
 
 
             if user_input == '3' or user_input.lower() == 'Add expense':
+                # Display user-name & date
+                date = str(datetime.date.today())
+                print(Person_1, f"{date:8s}")
 
+                # Display Divider
+                print('-' * 35)
+                #Menu Options
                 print(f'{"0 : Housing":20} {"1 : Groceries":16s}')
                 print(f'{"2 : Transportation":20s} {"3 : Utilities":16s}')
                 print(f'{"4 : Dining":20s} {"5 : Entertainment"}')
@@ -97,7 +173,7 @@ def begin_budget():
                         amount = int(input('Please enter the amount you wish to transfer:\n'))
                         Person_1.add_category_funds(Housing, amount)
                         #Restart the program
-                        user_input = input('Press 1 to reset or any other key to exit\n')
+                        user_input = input('Press 1 to reset\n')
                         if user_input == '1':
                             begin_budget()
 
@@ -108,7 +184,7 @@ def begin_budget():
 
                         Person_1.add_category_funds(Groceries, amount)
                         #Restart the program
-                        user_input = input('Press 1 to reset or any other key to exit\n')
+                        user_input = input('Press 1 to reset\n')
                         if user_input == '1':
                             begin_budget()
 
@@ -130,7 +206,7 @@ def begin_budget():
 
                         Person_1.add_category_funds(Utilities, amount)
                         # Restart the program
-                        user_input = input('Press 1 to reset or any other key to exit\n')
+                        user_input = input('Press 1 to reset\n')
                         if user_input == '1':
                             begin_budget()
 
@@ -140,7 +216,7 @@ def begin_budget():
                         amount = int(input('Please enter the amount you wish to transfer:\n'))
                         Person_1.add_category_funds(Dining, amount)
                         # Restart the program
-                        user_input = input('Press 1 to reset or any other key to exit\n')
+                        user_input = input('Press 1 to reset\n')
                         if user_input == '1':
                             begin_budget()
 
@@ -150,7 +226,7 @@ def begin_budget():
                         amount = int(input('Please enter the amount you wish to transfer:\n'))
                         Person_1.add_category_funds(Entertainment, amount)
                         # Restart the program
-                        user_input = input('Press 1 to reset or any other key to exit\n')
+                        user_input = input('Press 1 to reset\n')
                         if user_input == '1':
                             begin_budget()
 
@@ -158,15 +234,15 @@ def begin_budget():
                     if user_input == '1':
                         begin_budget()
 
-                    else:
-                        print("Thank you for using bloodhound budgets!")
+                if user_input == '6' or user_input.lower() == 'Exit':
+                    begin_budget()
 
 
 
 
 
 
-            if user_input == '4' or user_input.lower() == 'Get Funds':
+            if user_input == '4' or user_input.lower() == 'Transfer Funds':
                 print("unfinished please press 1 to return to main program")
                 user_input = input()
                 # reset program
@@ -229,7 +305,7 @@ def begin_budget():
                 Person_2.add_pay_check(amount)
 
                 # Ask for user input
-                user_input = input('Press 1 or restart to return to main menu or any other key to quit:\n').strip().lower()
+                user_input = input('Press 1 or type restart to return to the main program:\n').strip().lower()
                 print('\n\n\n\n\n')
 
                 # restart program
@@ -250,20 +326,86 @@ def begin_budget():
                     begin_budget()
 
             if user_input == '1' or user_input.lower() == 'Withdraw':
-                print("unfinished please press 1 to return to main program")
-                user_input = input()
-                # reset program
-                if user_input == '1':
+                # Display user-name & date
+                date = str(datetime.date.today())
+                print(Person_2, f"{date:8s}")
+
+                # Display Divider
+                print('-' * 35)
+
+                print(f'{"0 : Housing":20} {"1 : Groceries":16s}')
+                print(f'{"2 : Transportation":20s} {"3 : Utilities":16s}')
+                print(f'{"4 : Dining":20s} {"5 : Entertainment"}')
+                print(f'{"6 : Exit":20s}\n')
+
+                user_input = input('Which expense would you like to withdraw from?:\n').strip().lower()
+                print('\n\n\n\n\n')
+
+                if user_input == '0' or user_input.lower() == 'Housing':
+
+                    for Housing in ['Housing']:
+                        amount = int(input('Please enter the amount you wish to withdraw:\n'))
+                        Person_2.decrease_category_funds(Housing, amount)
+                        #Restart the program
+                        user_input = input('Press 1 to reset\n')
+                        if user_input == '1':
+                            begin_budget()
+
+                if user_input == '1' or user_input.lower() == 'Groceries':
+                    for Groceries in ['Groceries']:
+                        amount = int(input('Please enter the amount you wish to withdraw:\n'))
+                        Person_2.decrease_category_funds(Groceries, amount)
+                        #Restart the program
+                        user_input = input('Press 1 to reset\n')
+                        if user_input == '1':
+                            begin_budget()
+
+                if user_input == '2' or user_input.lower() == 'Transportation':
+                    for Transportation in ['Transportation']:
+                        amount = int(input('Please enter the amount you wish to withdraw:\n'))
+                        Person_2.decrease_category_funds(Transportation, amount)
+                        #Restart the program
+                        user_input = input('Press 1 to reset\n')
+                        if user_input == '1':
+                            begin_budget()
+
+                if user_input == '3' or user_input.lower() == 'Utilities':
+                    for Utilities in ['Utilities']:
+                        amount = int(input('Please enter the amount you wish to withdraw:\n'))
+                        Person_2.decrease_category_funds(Utilities, amount)
+                        #Restart the program
+                        user_input = input('Press 1 to reset\n')
+                        if user_input == '1':
+                            begin_budget()
+
+                if user_input == '4' or user_input.lower() == 'Dining':
+                    for Utilities in ['Dining']:
+                        amount = int(input('Please enter the amount you wish to withdraw:\n'))
+                        Person_2.decrease_category_funds(Dining, amount)
+                        #Restart the program
+                        user_input = input('Press 1 to reset\n')
+                        if user_input == '1':
+                            begin_budget()
+
+                if user_input == '5' or user_input.lower() == 'Entertainment':
+                    for Entertainment in ['Entertainment']:
+                        amount = int(input('Please enter the amount you wish to withdraw:\n'))
+                        Person_2.decrease_category_funds(Entertainment, amount)
+                        #Restart the program
+                        user_input = input('Press 1 to reset\n')
+                        if user_input == '1':
+                            begin_budget()
+
+                if user_input == '6' or user_input.lower() == 'Exit':
                     begin_budget()
 
             if user_input == '2' or user_input.lower() == 'Get Balance':
                 print("Total account balance:\n")
                 Person_2.get_balance()
-                user_input = input('Press 1 to return to the main menu:\n')
+                user_input = input('Press 1 to reset:\n')
                 if user_input == '1':
                     begin_budget()
-                else:
-                    print("Thank you for using Bloodhound Budgets!")
+
 
             if user_input == '3' or user_input.lower() == 'Add expense':
                 print(f'{"0 : Housing":20} {"1 : Groceries":16s}')
@@ -337,12 +479,9 @@ def begin_budget():
                         if user_input == '1':
                             begin_budget()
 
-                    user_input = input('Press 1 to reset or any other key to exit\n')
+                    user_input = input('Press 1 to reset\n')
                     if user_input == '1':
                         begin_budget()
-
-                    else:
-                        print("Thank you for using bloodhound budgets!")
 
             if user_input == '4' or user_input.lower() == 'Get Funds':
                 print("unfinished please press 1 to return to main program")

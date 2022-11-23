@@ -68,7 +68,7 @@ class Person:
 
     def decrease_category_funds(self, category=str, amount=int):
         # If users income/unused funds are >= amount requested, transfer funds to category
-        if int(amount) < self.expenses:
+        if int(amount) <= self.expenses:
             print(f'Decreasing funds to "{category}", Amount: ${amount}')
             self.categories[f'{category}'] -= amount
             self.expenses -= amount
