@@ -250,6 +250,7 @@ def begin_budget():
                     begin_budget()
 
             if user_input == '5' or user_input.lower() == 'View Transaction Log':
+                #FixMe Add the code here for person 1
                 print("unfinished please press 1 to return to main program")
                 user_input = input()
                 # reset program
@@ -286,7 +287,7 @@ def begin_budget():
         #Added Slot to display account info
         print(f'{"0 : Deposit":20} {"1 : Withdraw":16s}')
         print(f'{"2 : Get Balance":20s} {"3 : Add Expense":16s}')
-        print(f'{"4 : Get Funds":20s} {"5 : View Transaction Log"}')
+        print(f'{"4 : Transfer Funds":20s} {"5 : View Transaction Log"}')
         print(f'{"6 : Display Info":20s} {"7 : Exit"}\n')
 
         # Ask User for next input
@@ -483,7 +484,7 @@ def begin_budget():
                     if user_input == '1':
                         begin_budget()
 
-            if user_input == '4' or user_input.lower() == 'Get Funds':
+            if user_input == '4' or user_input.lower() == 'Transfer Funds':
                 print("unfinished please press 1 to return to main program")
                 user_input = input()
                 # reset program
@@ -491,6 +492,7 @@ def begin_budget():
                     begin_budget()
 
             if user_input == '5' or user_input.lower() == 'View Transaction Log':
+                #FixMe Add the code here for person 2
                 print("unfinished please press 1 to return to main program")
                 user_input = input()
                 # reset program
