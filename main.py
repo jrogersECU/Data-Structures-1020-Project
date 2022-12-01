@@ -242,12 +242,466 @@ def begin_budget():
 
 
 
+
+
             if user_input == '4' or user_input.lower() == 'Transfer Funds':
-                print("unfinished please press 1 to return to main program")
-                user_input = input()
-                # reset program
-                if user_input == '1':
+
+                date = str(datetime.date.today())
+                print(Person_1, f"{date:8s}")
+
+                # Display Divider
+                print('-' * 35)
+                # Menu Options
+                print(f'{"0 : Housing":20} {"1 : Groceries":16s}')
+                print(f'{"2 : Transportation":20s} {"3 : Utilities":16s}')
+                print(f'{"4 : Dining":20s} {"5 : Entertainment"}')
+                print(f'{"6 : Exit":20s}\n')
+
+                print("Which category would you like to transfer from?\n")
+                user_input = input().strip().lower()
+
+                if user_input == '0' or user_input.lower() == 'Housing':
+
+                    date = str(datetime.date.today())
+                    print(Person_1, f"{date:8s}")
+
+                    # Display Divider
+                    print('-' * 35)
+                    # Menu Options
+                    print(f'{"0 : Groceries":20} {"1 : Transportation":16s}')
+                    print(f'{"2 : Utilities":20s} {"3 : Dining":16s}')
+                    print(f'{"4 : Entertainment":20s} {"5 : Exit"}\n')
+
+                    print("Which category would you like to transfer to?\n")
+                    user_input = input().strip().lower()
+
+                    if user_input == '0' or user_input.lower() == 'Groceries':
+                        for Housing in ['Housing']:
+                            for Groceries in ['Groceries']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Groceries,Housing, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '1' or user_input.lower() == 'Transportation':
+                        for Housing in ['Housing']:
+                            for Transportation in ['Transportation']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Transportation,Housing, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '2' or user_input.lower() == 'Utilities':
+                        for Housing in ['Housing']:
+                            for Utilities in ['Utilities']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Utilities,Housing, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '3' or user_input.lower() == 'Dining':
+                        for Housing in ['Housing']:
+                            for Dining in ['Dining']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Dining,Housing, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '4' or user_input.lower() == 'Entertainment':
+                        for Housing in ['Housing']:
+                            for Entertainment in ['Entertainment']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Entertainment,Housing, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input =='5' or user_input.lower() == 'Exit':
+                        begin_budget()
+
+
+                if user_input == '1' or user_input.lower() == 'Groceries':
+
+                    date = str(datetime.date.today())
+                    print(Person_1, f"{date:8s}")
+
+                    # Display Divider
+                    print('-' * 35)
+                    # Menu Options
+                    print(f'{"0 : Housing":20} {"1 : Transportation":16s}')
+                    print(f'{"2 : Utilities":20s} {"3 : Dining":16s}')
+                    print(f'{"4 : Entertainment":20s} {"5 : Exit"}\n')
+
+                    print("Which category would you like to transfer to?\n")
+                    user_input = input().strip().lower()
+
+                    if user_input == '0' or user_input.lower() == 'Housing':
+                        for Groceries in ['Groceries']:
+                            for Housing in ['Housing']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Housing,Groceries, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '1' or user_input.lower() == 'Transportation':
+                        for Groceries in ['Groceries']:
+                            for Transportation in ['Transportation']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Transportation,Groceries, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '2' or user_input.lower() == 'Utilities':
+                        for Groceries in ['Groceries']:
+                            for Utilities in ['Utilities']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Utilities,Groceries, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '3' or user_input.lower() == 'Dining':
+                        for Groceries in ['Groceries']:
+                            for Dining in ['Dining']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Dining,Groceries, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '4' or user_input.lower() == 'Entertainment':
+                        for Groceries in ['Groceries']:
+                            for Entertainment in ['Entertainment']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Entertainment,Groceries, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input =='5' or user_input.lower() == 'Exit':
+                        begin_budget()
+
+                if user_input == '2' or user_input.lower() == 'Transportation':
+
+                    date = str(datetime.date.today())
+                    print(Person_1, f"{date:8s}")
+
+                    # Display Divider
+                    print('-' * 35)
+                    # Menu Options
+                    print(f'{"0 : Housing":20} {"1 : Groceries":16s}')
+                    print(f'{"2 : Utilities":20s} {"3 : Dining":16s}')
+                    print(f'{"4 : Entertainment":20s} {"5 : Exit"}\n')
+
+                    print("Which category would you like to transfer to?\n")
+                    user_input = input().strip().lower()
+
+                    if user_input == '0' or user_input.lower() == 'Housing':
+                        for Transportation in ['Transportation']:
+                            for Housing in ['Housing']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Housing,Transportation, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '1' or user_input.lower() == 'Groceries':
+                        for Transportation in ['Transportation']:
+                            for Groceries in ['Groceries']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Groceries,Transportation, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '2' or user_input.lower() == 'Utilties':
+                        for Transportation in ['Transportation']:
+                            for Utilities in ['Utilities']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Utilities,Transportation, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '3' or user_input.lower() == 'Dining':
+                        for Transportation in ['Transportation']:
+                            for Dining in ['Dining']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Dining,Transportation, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '4' or user_input.lower() == 'Entertainment':
+                        for Transportation in ['Transportation']:
+                            for Entertainment in ['Entertainment']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Entertainment,Transportation, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input =='5' or user_input.lower() == 'Exit':
+                        begin_budget()
+
+                if user_input == '3' or user_input.lower() == 'Utilities':
+
+                    date = str(datetime.date.today())
+                    print(Person_1, f"{date:8s}")
+
+                    # Display Divider
+                    print('-' * 35)
+                    # Menu Options
+                    print(f'{"0 : Housing":20} {"1 : Groceries":16s}')
+                    print(f'{"2 : Transportation":20s} {"3 : Dining":16s}')
+                    print(f'{"4 : Entertainment":20s} {"5 : Exit"}\n')
+
+                    print("Which category would you like to transfer to?\n")
+                    user_input = input().strip().lower()
+
+                    if user_input == '0' or user_input.lower() == 'Housing':
+                        for Utilities in ['Utilities']:
+                            for Housing in ['Housing']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Housing,Utilities, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '1' or user_input.lower() == 'Groceries':
+                        for Utilities in ['Utilities']:
+                            for Groceries in ['Groceries']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Groceries,Utilities, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '2' or user_input.lower() == 'Transportation':
+                        for Utilities in ['Utilities']:
+                            for Transportation in ['Transportation']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Transportation,Utilities, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '3' or user_input.lower() == 'Dining':
+                        for Utilities in ['Utilities']:
+                            for Dining in ['Dining']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Dining,Utilities, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '4' or user_input.lower() == 'Entertainment':
+                        for Utilities in ['Utilities']:
+                            for Entertainment in ['Entertainment']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Entertainment,Utilities, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input =='5' or user_input.lower() == 'Exit':
+                        begin_budget()
+
+                if user_input == '4' or user_input.lower() == 'Dining':
+
+                    date = str(datetime.date.today())
+                    print(Person_1, f"{date:8s}")
+
+                    # Display Divider
+                    print('-' * 35)
+                    # Menu Options
+                    print(f'{"0 : Housing":20} {"1 : Groceries":16s}')
+                    print(f'{"2 : Transportation":20s} {"3 : Utilities":16s}')
+                    print(f'{"4 : Entertainment":20s} {"5 : Exit"}\n')
+
+                    print("Which category would you like to transfer to?\n")
+                    user_input = input().strip().lower()
+
+                    if user_input == '0' or user_input.lower() == 'Housing':
+                        for Dining in ['Dining']:
+                            for Housing in ['Housing']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Housing,Dining, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '1' or user_input.lower() == 'Groceries':
+                        for Dining in ['Dining']:
+                            for Groceries in ['Groceries']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Groceries,Dining, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '2' or user_input.lower() == 'Transportation':
+                        for Dining in ['Dining']:
+                            for Transportation in ['Transportation']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Transportation,Dining, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '3' or user_input.lower() == 'Utilities':
+                        for Dining in ['Dining']:
+                            for Utilities in ['Utilities']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Utilities,Dining, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '4' or user_input.lower() == 'Entertainment':
+                        for Dining in ['Dining']:
+                            for Entertainment in ['Entertainment']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Entertainment,Dining, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input =='5' or user_input.lower() == 'Exit':
+                        begin_budget()
+
+                if user_input == '5' or user_input.lower() == 'Entertainment':
+
+                    date = str(datetime.date.today())
+                    print(Person_1, f"{date:8s}")
+
+                    # Display Divider
+                    print('-' * 35)
+                    # Menu Options
+                    print(f'{"0 : Housing":20} {"1 : Groceries":16s}')
+                    print(f'{"2 : Transportation":20s} {"3 : Utilities":16s}')
+                    print(f'{"4 : Dining":20s} {"5 : Exit"}\n')
+
+                    print("Which category would you like to transfer to?\n")
+                    user_input = input().strip().lower()
+
+                    if user_input == '0' or user_input.lower() == 'Housing':
+                        for Entertainment in ['Entertainment']:
+                            for Housing in ['Housing']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Housing,Entertainment, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '1' or user_input.lower() == 'Groceries':
+                        for Entertainment in ['Entertainment']:
+                            for Groceries in ['Groceries']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Groceries,Entertainment, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '2' or user_input.lower() == 'Transportation':
+                        for Entertainment in ['Entertainment']:
+                            for Transportation in ['Transportation']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Transportation,Entertainment, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '3' or user_input.lower() == 'Utilities':
+                        for Entertainment in ['Entertainment']:
+                            for Utilities in ['Utilities']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Utilities,Entertainment, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '4' or user_input.lower() == 'Dining':
+                        for Entertainment in ['Entertainment']:
+                            for Dining in ['Dining']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_1.transfer_category_funds(Dining,Entertainment, amount)
+                                #Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input =='5' or user_input.lower() == 'Exit':
+                        begin_budget()
+
+                if user_input == '6' or user_input.lower() == 'Exit':
                     begin_budget()
+
 
             if user_input == '5' or user_input.lower() == 'View Transaction Log':
                 #FixMe Add the code here for person 1
@@ -485,10 +939,459 @@ def begin_budget():
                         begin_budget()
 
             if user_input == '4' or user_input.lower() == 'Transfer Funds':
-                print("unfinished please press 1 to return to main program")
-                user_input = input()
-                # reset program
-                if user_input == '1':
+                date = str(datetime.date.today())
+                print(Person_2, f"{date:8s}")
+
+                # Display Divider
+                print('-' * 35)
+                # Menu Options
+                print(f'{"0 : Housing":20} {"1 : Groceries":16s}')
+                print(f'{"2 : Transportation":20s} {"3 : Utilities":16s}')
+                print(f'{"4 : Dining":20s} {"5 : Entertainment"}')
+                print(f'{"6 : Exit":20s}\n')
+
+                print("Which category would you like to transfer from?\n")
+                user_input = input().strip().lower()
+
+                if user_input == '0' or user_input.lower() == 'Housing':
+
+                    date = str(datetime.date.today())
+                    print(Person_2, f"{date:8s}")
+
+                    # Display Divider
+                    print('-' * 35)
+                    # Menu Options
+                    print(f'{"0 : Groceries":20} {"1 : Transportation":16s}')
+                    print(f'{"2 : Utilities":20s} {"3 : Dining":16s}')
+                    print(f'{"4 : Entertainment":20s} {"5 : Exit"}\n')
+
+                    print("Which category would you like to transfer to?\n")
+                    user_input = input().strip().lower()
+
+                    if user_input == '0' or user_input.lower() == 'Groceries':
+                        for Housing in ['Housing']:
+                            for Groceries in ['Groceries']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Groceries, Housing, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '1' or user_input.lower() == 'Transportation':
+                        for Housing in ['Housing']:
+                            for Transportation in ['Transportation']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Transportation, Housing, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '2' or user_input.lower() == 'Utilities':
+                        for Housing in ['Housing']:
+                            for Utilities in ['Utilities']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Utilities, Housing, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '3' or user_input.lower() == 'Dining':
+                        for Housing in ['Housing']:
+                            for Dining in ['Dining']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Dining, Housing, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '4' or user_input.lower() == 'Entertainment':
+                        for Housing in ['Housing']:
+                            for Entertainment in ['Entertainment']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Entertainment, Housing, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '5' or user_input.lower() == 'Exit':
+                        begin_budget()
+
+                if user_input == '1' or user_input.lower() == 'Groceries':
+
+                    date = str(datetime.date.today())
+                    print(Person_2, f"{date:8s}")
+
+                    # Display Divider
+                    print('-' * 35)
+                    # Menu Options
+                    print(f'{"0 : Housing":20} {"1 : Transportation":16s}')
+                    print(f'{"2 : Utilities":20s} {"3 : Dining":16s}')
+                    print(f'{"4 : Entertainment":20s} {"5 : Exit"}\n')
+
+                    print("Which category would you like to transfer to?\n")
+                    user_input = input().strip().lower()
+
+                    if user_input == '0' or user_input.lower() == 'Housing':
+                        for Groceries in ['Groceries']:
+                            for Housing in ['Housing']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Housing, Groceries, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '1' or user_input.lower() == 'Transportation':
+                        for Groceries in ['Groceries']:
+                            for Transportation in ['Transportation']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Transportation, Groceries, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '2' or user_input.lower() == 'Utilities':
+                        for Groceries in ['Groceries']:
+                            for Utilities in ['Utilities']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Utilities, Groceries, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '3' or user_input.lower() == 'Dining':
+                        for Groceries in ['Groceries']:
+                            for Dining in ['Dining']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Dining, Groceries, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '4' or user_input.lower() == 'Entertainment':
+                        for Groceries in ['Groceries']:
+                            for Entertainment in ['Entertainment']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Entertainment, Groceries, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '5' or user_input.lower() == 'Exit':
+                        begin_budget()
+
+                if user_input == '2' or user_input.lower() == 'Transportation':
+
+                    date = str(datetime.date.today())
+                    print(Person_2, f"{date:8s}")
+
+                    # Display Divider
+                    print('-' * 35)
+                    # Menu Options
+                    print(f'{"0 : Housing":20} {"1 : Groceries":16s}')
+                    print(f'{"2 : Utilities":20s} {"3 : Dining":16s}')
+                    print(f'{"4 : Entertainment":20s} {"5 : Exit"}\n')
+
+                    print("Which category would you like to transfer to?\n")
+                    user_input = input().strip().lower()
+
+                    if user_input == '0' or user_input.lower() == 'Housing':
+                        for Transportation in ['Transportation']:
+                            for Housing in ['Housing']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Housing, Transportation, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '1' or user_input.lower() == 'Groceries':
+                        for Transportation in ['Transportation']:
+                            for Groceries in ['Groceries']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Groceries, Transportation, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '2' or user_input.lower() == 'Utilties':
+                        for Transportation in ['Transportation']:
+                            for Utilities in ['Utilities']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Utilities, Transportation, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '3' or user_input.lower() == 'Dining':
+                        for Transportation in ['Transportation']:
+                            for Dining in ['Dining']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Dining, Transportation, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '4' or user_input.lower() == 'Entertainment':
+                        for Transportation in ['Transportation']:
+                            for Entertainment in ['Entertainment']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Entertainment, Transportation, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '5' or user_input.lower() == 'Exit':
+                        begin_budget()
+
+                if user_input == '3' or user_input.lower() == 'Utilities':
+
+                    date = str(datetime.date.today())
+                    print(Person_2, f"{date:8s}")
+
+                    # Display Divider
+                    print('-' * 35)
+                    # Menu Options
+                    print(f'{"0 : Housing":20} {"1 : Groceries":16s}')
+                    print(f'{"2 : Transportation":20s} {"3 : Dining":16s}')
+                    print(f'{"4 : Entertainment":20s} {"5 : Exit"}\n')
+
+                    print("Which category would you like to transfer to?\n")
+                    user_input = input().strip().lower()
+
+                    if user_input == '0' or user_input.lower() == 'Housing':
+                        for Utilities in ['Utilities']:
+                            for Housing in ['Housing']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Housing, Utilities, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '1' or user_input.lower() == 'Groceries':
+                        for Utilities in ['Utilities']:
+                            for Groceries in ['Groceries']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Groceries, Utilities, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '2' or user_input.lower() == 'Transportation':
+                        for Utilities in ['Utilities']:
+                            for Transportation in ['Transportation']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Transportation, Utilities, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '3' or user_input.lower() == 'Dining':
+                        for Utilities in ['Utilities']:
+                            for Dining in ['Dining']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Dining, Utilities, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '4' or user_input.lower() == 'Entertainment':
+                        for Utilities in ['Utilities']:
+                            for Entertainment in ['Entertainment']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Entertainment, Utilities, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '5' or user_input.lower() == 'Exit':
+                        begin_budget()
+
+                if user_input == '4' or user_input.lower() == 'Dining':
+
+                    date = str(datetime.date.today())
+                    print(Person_2, f"{date:8s}")
+
+                    # Display Divider
+                    print('-' * 35)
+                    # Menu Options
+                    print(f'{"0 : Housing":20} {"1 : Groceries":16s}')
+                    print(f'{"2 : Transportation":20s} {"3 : Utilities":16s}')
+                    print(f'{"4 : Entertainment":20s} {"5 : Exit"}\n')
+
+                    print("Which category would you like to transfer to?\n")
+                    user_input = input().strip().lower()
+
+                    if user_input == '0' or user_input.lower() == 'Housing':
+                        for Dining in ['Dining']:
+                            for Housing in ['Housing']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Housing, Dining, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '1' or user_input.lower() == 'Groceries':
+                        for Dining in ['Dining']:
+                            for Groceries in ['Groceries']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Groceries, Dining, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '2' or user_input.lower() == 'Transportation':
+                        for Dining in ['Dining']:
+                            for Transportation in ['Transportation']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Transportation, Dining, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '3' or user_input.lower() == 'Utilities':
+                        for Dining in ['Dining']:
+                            for Utilities in ['Utilities']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Utilities, Dining, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '4' or user_input.lower() == 'Entertainment':
+                        for Dining in ['Dining']:
+                            for Entertainment in ['Entertainment']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Entertainment, Dining, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '5' or user_input.lower() == 'Exit':
+                        begin_budget()
+
+                if user_input == '5' or user_input.lower() == 'Entertainment':
+
+                    date = str(datetime.date.today())
+                    print(Person_2, f"{date:8s}")
+
+                    # Display Divider
+                    print('-' * 35)
+                    # Menu Options
+                    print(f'{"0 : Housing":20} {"1 : Groceries":16s}')
+                    print(f'{"2 : Transportation":20s} {"3 : Utilities":16s}')
+                    print(f'{"4 : Dining":20s} {"5 : Exit"}\n')
+
+                    print("Which category would you like to transfer to?\n")
+                    user_input = input().strip().lower()
+
+                    if user_input == '0' or user_input.lower() == 'Housing':
+                        for Entertainment in ['Entertainment']:
+                            for Housing in ['Housing']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Housing, Entertainment, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '1' or user_input.lower() == 'Groceries':
+                        for Entertainment in ['Entertainment']:
+                            for Groceries in ['Groceries']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Groceries, Entertainment, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '2' or user_input.lower() == 'Transportation':
+                        for Entertainment in ['Entertainment']:
+                            for Transportation in ['Transportation']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Transportation, Entertainment, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '3' or user_input.lower() == 'Utilities':
+                        for Entertainment in ['Entertainment']:
+                            for Utilities in ['Utilities']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Utilities, Entertainment, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '4' or user_input.lower() == 'Dining':
+                        for Entertainment in ['Entertainment']:
+                            for Dining in ['Dining']:
+                                amount = int(input('Please enter the amount you wish to transfer:\n'))
+
+                                Person_2.transfer_category_funds(Dining, Entertainment, amount)
+                                # Restart the program
+                                user_input = input('Press 1 to reset\n')
+                                if user_input == '1':
+                                    begin_budget()
+
+                    if user_input == '5' or user_input.lower() == 'Exit':
+                        begin_budget()
+
+                if user_input == '6' or user_input.lower() == 'Exit':
                     begin_budget()
 
             if user_input == '5' or user_input.lower() == 'View Transaction Log':
