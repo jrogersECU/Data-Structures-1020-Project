@@ -1,5 +1,5 @@
 import datetime
-
+import LinkedList
 
 # A class that represents a person/object.
 # ALL code below works as desired. Ready For Use!
@@ -26,7 +26,11 @@ class Person:
         # TODO ********* REPLACE 'ARRAY_LOG' *************
         # REPLACE 'ARRAY_LOG' WITH Double-LinkedList
         # self.log = LinkedList()  # LinkedList used to store & read log entries
-        self.array_log = []
+        def __init__(self, initial_data):
+            self.data = initial_data
+            self.next = None
+        #self.log = LinkedList()=
+
 
     def __str__(self):
         # Returns a String representation of the selected person's name
@@ -50,7 +54,7 @@ class Person:
         }
         # TODO ********* APPEND TO Double-LinkedList *************
         # REPLACE 'ARRAY_LOG.APPEND' WITH Double-LinkedList.APPEND
-        self.array_log.append(log_data)
+        LinkedList.append
 
     def add_category_funds(self, category=str, amount=int):
         # If users income/unused funds are >= amount requested, transfer funds to category
