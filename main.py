@@ -1,6 +1,8 @@
+
 from users import Person
 import datetime
 date = str(datetime.date.today())
+
 
 # Create a new Person entry in the database
 Person_1 = Person('Mutulu Shakur', 21, 100)
@@ -706,6 +708,7 @@ def begin_budget():
             if user_input == '5' or user_input.lower() == 'View Transaction Log':
                 #FixMe Add the code here for person 1
                 print("unfinished please press 1 to return to main program")
+
                 user_input = input()
                 # reset program
                 if user_input == '1':
