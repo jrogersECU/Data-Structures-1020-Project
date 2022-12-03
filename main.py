@@ -118,7 +118,7 @@ def begin_budget():
                             begin_budget()
 
                 if user_input == '4' or user_input.lower() == 'Dining':
-                    for Utilities in ['Dining']:
+                    for Dining in ['Dining']:
                         amount = int(input('Please enter the amount you wish to withdraw:\n'))
                         Person_1.decrease_category_funds(Dining, amount)
                         #Restart the program
@@ -717,6 +717,7 @@ def begin_budget():
             if user_input == '6' or user_input.lower() == 'Display info':
                 print(Person_1.print_all_info())
                 print("Press 1 to return to main program")
+                print(Person_1.print_logs())
                 user_input = input()
                 # reset program
                 if user_input == '1':
@@ -837,7 +838,7 @@ def begin_budget():
                             begin_budget()
 
                 if user_input == '4' or user_input.lower() == 'Dining':
-                    for Utilities in ['Dining']:
+                    for Dining in ['Dining']:
                         amount = int(input('Please enter the amount you wish to withdraw:\n'))
                         Person_2.decrease_category_funds(Dining, amount)
                         #Restart the program
