@@ -1,6 +1,5 @@
 import datetime
-import LinkedList
-
+from LinkedList import LinkedList
 # A class that represents a person/object.
 # ALL code below works as desired. Ready For Use!
 class Person:
@@ -23,38 +22,32 @@ class Person:
             'Dining': 0,
             'Entertainment': 0,
         }
+
         # TODO ********* REPLACE 'ARRAY_LOG' *************
         # REPLACE 'ARRAY_LOG' WITH Double-LinkedList
         # self.log = LinkedList()  # LinkedList used to store & read log entries
-        def __init__(self, initial_data):
-            self.data = initial_data
-            self.next = None
-        #self.log = LinkedList()=
 
+        self.log = LinkedList()
 
     def __str__(self):
         # Returns a String representation of the selected person's name
         return self.name
 
     def add_log_entry(self, action):
-
         # A Dictionary of user attributes
-        log_data = {
-            'key': len(self.array_log) + 1,
-            'action': action,
-            'date_time': str(datetime.datetime.now()),
-            'name': self.name,
-            'age': self.age,
-            'balance': self.income,
-            'additional_income': self.additional_income,
-            'full_balance': self.income - self.expenses,
-            'expenses': self.expenses,
-            # 'use_percentage': self.get_use_percentage(),
-            'categories': self.categories
-        }
-        # TODO ********* APPEND TO Double-LinkedList *************
-        # REPLACE 'ARRAY_LOG.APPEND' WITH Double-LinkedList.APPEND
-        LinkedList.append
+        #return
+
+        count = self.log.length()
+
+        log_data = dict(key=count + 1, action=action, date_time=str(datetime.datetime.now()), name=self.name,
+                    age=self.age, balance=self.income, additional_income=self.additional_income,
+                    full_balance=self.income - self.expenses, expenses=self.expenses, categories=self.categories)
+        self.log.append(log_data)
+        return
+    # TODO ********* APPEND TO Double-LinkedList *************
+    # REPLACE 'ARRAY_LOG.APPEND' WITH Double-LinkedList.APPEND
+
+
 
     def add_category_funds(self, category=str, amount=int):
         # If users income/unused funds are >= amount requested, transfer funds to category
@@ -128,7 +121,7 @@ class Person:
     def print_logs(self):
         print('<-----------------------------------  DATA LOGS  --------------------------------------------->\n')
         # REPLACE ARRAY FOR-LOOP WITH 'log' Double-LinkedList FOR-LOOP
-        for log in self.array_log:
+        for log in self.log:
             print(log)
 
     def add_pay_check(self, amount):
