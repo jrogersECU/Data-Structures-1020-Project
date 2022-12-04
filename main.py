@@ -147,12 +147,6 @@ def begin_budget():
                     begin_budget()
 
 
-
-
-
-
-
-
             if user_input == '3' or user_input.lower() == 'Add expense':
                 # Display user-name & date
                 date = str(datetime.date.today())
@@ -238,12 +232,6 @@ def begin_budget():
 
                 if user_input == '6' or user_input.lower() == 'Exit':
                     begin_budget()
-
-
-
-
-
-
 
 
             if user_input == '4' or user_input.lower() == 'Transfer Funds':
@@ -714,6 +702,7 @@ def begin_budget():
                 if user_input == '1':
                     begin_budget()
 
+
             if user_input == '6' or user_input.lower() == 'Display info':
                 print(Person_1.print_all_info())
                 user_input = input('Please press 1 to reset\n')
@@ -722,12 +711,10 @@ def begin_budget():
                     begin_budget()
 
 
-
             if user_input == '7' or user_input.lower() == 'Exit':
                 print("Thank you for choosing Bloodhound Budgets!")
                 # reset program
                 begin_budget()
-
 
 
 
@@ -856,6 +843,7 @@ def begin_budget():
                 if user_input == '6' or user_input.lower() == 'Exit':
                     begin_budget()
 
+
             if user_input == '2' or user_input.lower() == 'Get Balance':
                 print("Total account balance:\n")
                 Person_2.get_balance()
@@ -939,6 +927,7 @@ def begin_budget():
                     user_input = input('Press 1 to reset\n')
                     if user_input == '1':
                         begin_budget()
+
 
             if user_input == '4' or user_input.lower() == 'Transfer Funds':
                 date = str(datetime.date.today())
@@ -1396,6 +1385,7 @@ def begin_budget():
                 if user_input == '6' or user_input.lower() == 'Exit':
                     begin_budget()
 
+
             if user_input == '5' or user_input.lower() == 'View Transaction Log':
                 print(Person_2.print_logs())
                 user_input = input("Please press 1 to reset\n")
@@ -1403,12 +1393,14 @@ def begin_budget():
                 if user_input == '1':
                     begin_budget()
 
+
             if user_input == '6' or user_input.lower() == 'Display info':
                 print(Person_2.print_all_info())
                 user_input = input('Please press 1 to reset\n')
                 # reset program
                 if user_input == '1':
                     begin_budget()
+
 
             if user_input == '7' or user_input.lower() == 'Exit':
                 print("Thank you for choosing Bloodhound Budgets!")
