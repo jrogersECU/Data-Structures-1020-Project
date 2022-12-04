@@ -121,6 +121,7 @@ class Person:
         else:
             print('Unable to find either category, try again')
         self.add_log_entry("Transferred all category funds")
+
     # TODO ********* Interate Through 'log' Double-LinkedList *************
     def print_logs(self):
         print('<-----------------------------------  DATA LOGS  --------------------------------------------->\n')
