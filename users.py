@@ -121,8 +121,9 @@ class Person:
     def print_logs(self):
         print('<-----------------------------------  DATA LOGS  --------------------------------------------->\n')
         # REPLACE ARRAY FOR-LOOP WITH 'log' Double-LinkedList FOR-LOOP
-        for log in self.log:
-            print(log)
+        #for log in self.log:
+            #print(log)
+        self.log.printList()
 
     def add_pay_check(self, amount):
         # Prints the current balance
