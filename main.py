@@ -1400,8 +1400,9 @@ def begin_budget():
 
             if user_input == '5' or user_input.lower() == 'View Transaction Log':
                 #FixMe Add the code here for person 2
-                print("unfinished please press 1 to return to main program")
-                user_input = input()
+                print(Person_2.print_all_info())
+                print(Person_2.print_logs())
+                user_input = input("Please press 1 to reset")
                 # reset program
                 if user_input == '1':
                     begin_budget()
