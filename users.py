@@ -62,6 +62,7 @@ class Person:
             print('Sorry, but the amount you entered is more than account balance.')
             print('Please try again...')
         print(f"Category : {category}\nAmount : +${self.categories[f'{category}']}\n\n")
+        self.add_log_entry("Added category funds")
 
     def decrease_category_funds(self, category=str, amount=int):
         # If users income/unused funds are >= amount requested, transfer funds to category
@@ -76,16 +77,18 @@ class Person:
             print('Sorry, but the amount you entered is more than your "expenses" balance.')
             print('Please try again...')
         print(f"Category : {category}\nDecreased Amount : -${amount}\n\n")
+        self.add_log_entry("Decreased category funds")
 
     def add_custom_category(self, category=str, amount=int):
         self.categories[f'{category}'] = amount
         print(f"Added Category : {category}\nAmount : +${self.categories[f'{category}']}\n\n")
-
+        self.add_log_entry("added custom category")
     def remove_category(self, category=str):
         # Grab soon to be deleted data before erasing
         transferred = self.categories[f'{category}']
         del self.categories[f'{category}']
         self.income += transferred
+        self.add_log_entry("Removed category")
 
         print(f"Deleted Category : {category}\nAmount Transferred to Income : -${transferred}")
 
@@ -99,6 +102,7 @@ class Person:
             print(f"Transferred ${amount}, from {from_category} to {to_category}")
         else:
             print(f'Category amount is less than amount requested, try again...')
+        self.add_log_entry("Transferred category")
 
     def transfer_all_category_funds(self, to_category=str, from_category=str):
         # If to_category and from_category exist in dictionary, transfer_category_funds.
@@ -116,13 +120,15 @@ class Person:
                 print('Zero funds in category transferring *from, try again...')
         else:
             print('Unable to find either category, try again')
+        self.add_log_entry("Transferred all category funds")
 
     # TODO ********* Interate Through 'log' Double-LinkedList *************
     def print_logs(self):
         print('<-----------------------------------  DATA LOGS  --------------------------------------------->\n')
         # REPLACE ARRAY FOR-LOOP WITH 'log' Double-LinkedList FOR-LOOP
-        for log in self.log:
-            print(log)
+        #for log in self.log:
+            #print(log)
+        self.log.printList()
 
     def add_pay_check(self, amount):
         # Prints the current balance
