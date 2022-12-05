@@ -742,7 +742,7 @@ def begin_budget():
 
             if user_input == '0' or user_input.lower() == 'Deposit':
                 # set class variables
-                amount = int(input("Please enter the amount you wish to deposit"))
+                amount = int(input("Please enter the amount you wish to deposit\n"))
                 self = Person_2.income
 
                 # Initialize class def add_pay_check

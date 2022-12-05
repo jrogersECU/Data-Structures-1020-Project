@@ -74,21 +74,3 @@ class LinkedList:
         while (temp):
             print(temp.data)
             temp = temp.next
-
-
-
-
-
-
-
-
-if __name__ == '__main__':
-
-    llist = LinkedList()
-    #node1 = Node(1)
-    #node2 = Node(2)
-    llist.append(1)
-    llist.append(2)
-
-    llist.printList()
-
